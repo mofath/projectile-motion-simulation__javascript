@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Projectile Motion Simulation</title>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="data">
+            <div>T: <span id="time"></span><span>0 s</span></div>
+            <div>X: <span id="x-displacement"></span><span>0 m</span></div>
+            <div>Y: <span id="y-displacement"></span><span>0 m</span></div>
+            <div>Max Height: <span id="max-height"></span><span>0 m</span></div>
+        </div>
+
+        <div class="controls">
+            <div class="form-group">
+                <label for="">Vi:</label>
+                <input class="voi" type="text" value="90" />
+            </div>
+            <div class="form-group">
+                <label for="">&Theta;:</label>
+                <input class="theta" type="text" value="50" />
+            </div>
+            <div class="form-group">
+                <button class="launch-btn">Lanuch</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="reset-btn">
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        data-icon="redo-alt"
+        class="svg-inline--fa fa-redo-alt fa-w-16"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          fill="currentColor"
+          d="M256.455 8c66.269.119 126.437 26.233 170.859 68.685l35.715-35.715C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.75c-30.864-28.899-70.801-44.907-113.23-45.273-92.398-.798-170.283 73.977-169.484 169.442C88.764 348.009 162.184 424 256 424c41.127 0 79.997-14.678 110.629-41.556 4.743-4.161 11.906-3.908 16.368.553l39.662 39.662c4.872 4.872 4.631 12.815-.482 17.433C378.202 479.813 319.926 504 256 504 119.034 504 8.001 392.967 8 256.002 7.999 119.193 119.646 7.755 256.455 8z"
+        ></path>
+      </svg>
+    </button>
+
+    <img src="" alt="" id="fireball">
+
+    <div class="background">
+        <div class="sky">
+            <img src="https://github.com/abdullahbc989/css-animate-tut/blob/master/src/mario/finished/src/assets/imgs/cloud.png?raw=true" alt="a cloud" class="cloud" />
+            <img src="https://github.com/abdullahbc989/css-animate-tut/blob/master/src/mario/finished/src/assets/imgs/cloud.png?raw=true" alt="a cloud" class="cloud" />
+        </div>
+        <div class="grass">
+            <div class="road"></div>
+        </div>
+    </div>
+
+    <canvas id="main"> </canvas>
+
+    <script src="js/config.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/point.js"></script>
+    <script src="js/missile.js"></script>
+    <script src="js/cannon.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
